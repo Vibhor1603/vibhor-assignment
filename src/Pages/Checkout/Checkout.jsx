@@ -88,7 +88,7 @@ export default function Checkout() {
                     className="flex items-center gap-4 p-4 border rounded-lg"
                   >
                     <img
-                      src={item.image}
+                      src="https://d2v5dzhdg4zhx3.cloudfront.net/web-assets/images/storypages/primary/ProductShowcasesampleimages/JPEG/Product+Showcase-1.jpg"
                       alt={item.title}
                       className="w-16 h-16 object-contain rounded"
                     />

@@ -77,8 +77,8 @@ export default function Login() {
         {/* Login Form */}
         <Card className="w-full">
           <CardHeader>
-            <CardTitle className="text-2xl">Login to your account</CardTitle>
-            <CardDescription className="text-lg">
+            <CardTitle className="text-xl">Login to your account</CardTitle>
+            <CardDescription className="text-sm">
               Enter your email below to login to your account
             </CardDescription>
           </CardHeader>
@@ -86,7 +86,7 @@ export default function Login() {
             <form>
               <div className="flex flex-col gap-6 ">
                 <div className="grid gap-2">
-                  <Label htmlFor="email" className="text-xl">
+                  <Label htmlFor="email" className="text-sm">
                     Email
                   </Label>
                   <Input
@@ -94,7 +94,7 @@ export default function Login() {
                     type="email"
                     placeholder="m@example.com"
                     required
-                    className="h-10 placeholder:text-md"
+                    className="h-9 text-sm placeholder:text-sm"
                     onChange={(e) =>
                       setLoginData({ ...loginData, email: e.target.value })
                     }
@@ -102,12 +102,12 @@ export default function Login() {
                 </div>
                 <div className="grid gap-2">
                   <div className="flex items-center">
-                    <Label htmlFor="password" className="text-xl">
+                    <Label htmlFor="password" className="text-sm">
                       Password
                     </Label>
                     <a
                       href="#"
-                      className="ml-auto inline-block text-md underline-offset-4 hover:underline"
+                      className="ml-auto inline-block text-xs underline-offset-4 hover:underline"
                       onClick={forgotPassHandle}
                     >
                       Forgot your password?
@@ -118,7 +118,7 @@ export default function Login() {
                       id="password"
                       type={showPassword ? "text" : "password"}
                       required
-                      className="h-10 placeholder:text-md pr-10"
+                      className="h-9 text-sm placeholder:text-sm pr-10"
                       onChange={(e) =>
                         setLoginData({ ...loginData, password: e.target.value })
                       }

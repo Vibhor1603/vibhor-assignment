@@ -11,10 +11,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { addToCart } from "../redux/cartSlice";
-import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItem = useSelector((state) =>
     state.cart.items.find((item) => item.id === product.id)
@@ -27,13 +25,12 @@ const ProductCard = ({ product }) => {
   };
 
   const handleProductInfo = () => {
-    navigate(`/product-info/${product.id}`);
+    window.location.href = `/product-info/${product.id}`;
   };
 
   const handleKnowMore = (e) => {
     e.stopPropagation(); // Prevent card navigation
-
-    navigate(`/product-info/${product.id}`);
+    window.location.href = `/product-info/${product.id}`;
   };
 
   return (
